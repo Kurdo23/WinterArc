@@ -1,0 +1,16 @@
+.stars {
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: scrollStars 60s linear infinite;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes scrollStars {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
