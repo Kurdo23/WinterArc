@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Winter Arc</title>
 </head>
-<body>
-    <div class="stars"></div>
+
+<body class="min-h-screen bg-cover bg-center bg-no-repeat m-0 text-[aliceblue]"
+    style="background-image: url('../pictures/mountain.jpg');">
+    <div class="stars"></div> <!-- Background stars effect -->
+    <div class="glassEffect"></div>
+    <div style="position: relative; z-index: 2;">
+        <header class="h-[100px] w-full header text-white p-4 flex justify-between items-center">
+            <nav class="w-full flex fixed justify-center">
+                <ul class="flex space-x-10">
+                    <li><a href="/pages/index.html">Home</a></li>
+                    <li><a href="/pages/index.html">About us</a></li>
+                    <li><a href="/pages/index.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="typing-text"><span></span></div>
+        <!-- linked button, github, linkedin-->
+        <footer class="footer fixed bottom-0 left-0 text-start text-white p-4 ml-8">
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

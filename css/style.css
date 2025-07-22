@@ -1,5 +1,15 @@
+body {
+  background-image: url("../pictures/mountain.jpg");
+  background-size: cover; /* L’image couvre tout l’écran */
+  background-position: center; /* L’image est centrée */
+  background-repeat: no-repeat; /* L’image ne se répète pas */
+  margin: 0;
+  padding: 0;
+  color: #F0F8FF; /* Texte principal */
+}
+
 .stars {
-  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
   animation: scrollStars 60s linear infinite;
   position: fixed;
   width: 100%;
@@ -11,6 +21,107 @@
 }
 
 @keyframes scrollStars {
-  0% { background-position: 0 0; }
-  100% { background-position: 1000px 1000px; }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
+}
+
+.typing-text {
+  font-size: 2.5em;
+  margin: 2.5rem 0 0 2.5rem;
+  color: #143365;
+  font-size: 28px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.typing-text span {
+  position: relative;
+  background: rgba(22, 29, 59, 0.4); /* Effet givré bleu nuit */
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px); /* Effet givré */
+  -webkit-backdrop-filter: blur(8px); /* Pour Safari */
+  padding: 0.5em 1.5em;
+  color: #F0F8FF;
+}
+
+.typing-text span::before {
+  content: "software Developer";
+  color: #2867CC; /* Accent bleu vif */
+  animation: words 20s infinite;
+}
+
+.typing-text span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  right: -8;
+  animation: cursor 0.6s infinite;
+}
+
+@keyframes words {
+  0%, 20% { content: "Hello World"; } 
+  21%, 40% { content: "I am"; } 
+  41%, 60% { content: "a"; }
+  61%, 80% { content: "Developer"; }
+  81%, 100% { content: "Kurdo023"; }
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid #F0F8FF;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease;
+  color: #F0F8FF;
+}
+
+.social-icons a:hover {
+  color: #161D3B;
+  background-color: #F0F8FF;
+  box-shadow: 0 0 25px #2867CC;
+}
+
+.glassEffect {
+  position: fixed;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(22, 29, 59, 0.35); /* Fond givré bleu nuit */
+  border-radius: 0;
+  box-shadow: 0 4px 30px rgba(20, 51, 101, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1; /* Juste au-dessus du background, mais sous le contenu */
+}
+
+.header {
+  background: rgba(22, 29, 59, 0.85); /* Header bleu nuit translucide */
+  color: #F0F8FF;
+}
+
+nav ul li a {
+  color: #F0F8FF;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #2867CC; /* Accent bleu vif au hover */
 }
